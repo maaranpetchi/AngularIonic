@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { AlertController } from '@ionic/angular';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-employee',
@@ -12,8 +14,9 @@ export class EmployeePage implements OnInit {
   user: user = new user();
   isDisplay: boolean = true;
   userId!: any;
-  constructor() { }
-
+  constructor(private alertController: AlertController) { }
+  createuser:boolean = true;
+  updateuser:boolean = false;
   ngOnInit(): void {
     // Initialize user data if needed
   }
@@ -29,7 +32,7 @@ export class EmployeePage implements OnInit {
     this.clearForm();
   }
 
-  onSubmit() {
+  async onSubmit() {
     if (this.userId !== undefined) {
       this.userItem[this.userId] = JSON.parse(JSON.stringify(this.user));
     } else {
@@ -38,6 +41,14 @@ export class EmployeePage implements OnInit {
       this.userItem.push(JSON.parse(JSON.stringify(this.user)));
     }
     this.isDisplay = true;
+    const alert = await this.alertController.create({
+      header: 'Done',
+      subHeader: '',
+      message: 'Data Added Successfully!',
+      buttons: ['OK'],
+    });
+
+    await alert.present();
     this.clearForm();
   }
 
@@ -53,12 +64,22 @@ export class EmployeePage implements OnInit {
     this.isDisplay = false;
     this.submitButton = false;
     this.updateButton =true;
+    this.createuser = false;
+    this.updateuser=true;
   }
 
-  updateUser() {
+  async updateUser() {
     if (this.userId !== undefined) {
       this.userItem[this.userId] = JSON.parse(JSON.stringify(this.user));
       this.isDisplay = true;
+      const alert = await this.alertController.create({
+        header: 'Done',
+        subHeader: '',
+        message: 'Data Update Successfully!',
+        buttons: ['OK'],
+      });
+  
+      await alert.present();
       this.clearForm();
     }
   }
