@@ -1,8 +1,11 @@
 import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { HomePageRoutingModule } from './home-routing.module';
+
+import { IonicModule } from '@ionic/angular';
+
+import { EmployeePageRoutingModule } from './employee-routing.module';
 import { AngularMaterialModule } from '../AngularMaterial/angular-material/angular-material.module';
 
 @NgModule({
@@ -10,11 +13,11 @@ import { AngularMaterialModule } from '../AngularMaterial/angular-material/angul
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule,
     AngularMaterialModule,
-    
+    EmployeePageRoutingModule
   ],
   declarations: [],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
+
 })
-export class HomePageModule {}
+export class EmployeePageModule {}

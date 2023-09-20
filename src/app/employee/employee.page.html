@@ -1,0 +1,108 @@
+<ion-header class="titleheader" [translucent]="true">
+  <ion-toolbar>
+    <ion-title> <div class="logoTitle"> 
+      <img class="logoPic" src="../../assets/images/kryptoslogo.png" alt="logo" srcset="">
+      <h1 class="logoheader">KRYPTOS</h1>   </div> </ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-button *ngIf="isDisplay" (click)="addProduct()" class="btn-sub">Add User</ion-button>
+  <ion-button (click)="back()" *ngIf="!isDisplay" class="btn-sub">Back</ion-button>
+  <!-- </ion-card> -->
+  <ion-card *ngIf="isDisplay">
+    <ion-item>
+      <ion-grid>
+        <ion-row class="divide">
+          <ion-col size="3">
+            User Name
+          </ion-col>
+          <ion-col size="3">
+            Email
+          </ion-col>
+          <ion-col size="3">
+            Gender
+          </ion-col>
+          <ion-col size="2">
+            Action
+          </ion-col>
+        </ion-row>
+        <ion-row *ngFor="let u of userItem;let i = index;">
+          <ion-col size="3">
+            {{u.username}}
+          </ion-col>
+          <ion-col size="3">
+            {{u.email}}
+          </ion-col>
+          <ion-col size="3">
+            {{u.gender}}
+          </ion-col>
+          <ion-col size="3">
+            <ion-button color="warning" (click)="edit(i)">
+              <ion-icon name="create-outline"></ion-icon>
+            </ion-button>
+            <ion-button color="danger" (click)="remove(i)">
+              <ion-icon name="trash-outline"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-card>
+  <ion-card *ngIf="!isDisplay">
+    <ion-item>
+      Create User
+    </ion-item>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size-md="12" size-sm="12" size-lg="3" size-xs="12">
+            <ion-item>
+              <ion-label position="floating">User Name</ion-label>
+              <ion-input [(ngModel)]="user.username"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size-md="12" size-sm="12" size-lg="3" size-xs="12">
+            <ion-item>
+              <ion-label position="floating">Email</ion-label>
+              <ion-input [(ngModel)]="user.email"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size-md="12" size-sm="12" size-lg="3" size-xs="12">
+            <ion-item>
+              <div>
+                <div>
+                  <ion-label>Gender</ion-label>
+                </div>
+                <div>
+                  <ion-radio-group [(ngModel)]="user.gender">
+                    <div class="gender-val">
+                      <ion-item>
+                        <ion-label>Male</ion-label>
+                        <ion-radio value="male" name="gender"></ion-radio>
+                      </ion-item>
+                    </div>
+                    <div class="gender-val">
+                      <ion-item>
+                        <ion-label>Female</ion-label>
+                        <ion-radio value="female" name="gender"></ion-radio>
+                      </ion-item>
+                    </div>
+                  </ion-radio-group>
+                </div>
+              </div>
+            </ion-item>
+          </ion-col>
+          <ion-col *ngIf="submitButton" >
+            <ion-button  expand="block" (click)="onSubmit()">Submit</ion-button>
+          </ion-col>
+          <ion-col *ngIf="updateButton">
+            <ion-button expand="block" (click)="updateUser()">Update</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

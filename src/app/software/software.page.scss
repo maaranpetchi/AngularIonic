@@ -1,0 +1,67 @@
+
+img.oursoftware {
+    height: 120px;
+}
+
+.softwareUsed {
+    display: flex;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.logoheader {
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+    font-family: 'Lora', serif;
+    text-transform: uppercase;
+    position: relative;
+    color: #ccc;
+}
+
+.logoheader:before {
+    content: "KRYPTOS";
+    position: absolute;
+    color: #262626;
+    top: 0;
+    left: 0;
+    width: 0%;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.logoheader:hover:before {
+    width: 100%;
+}
+
+.titleheader {
+    background-color: black;
+}
+
+.logoTitle {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoPic {
+    height: 41px;
+}
+
+
+.cardHeader {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-weight: bolder;
+}
+
+.cardWord {
+    font-family: cursive;
+    color: gold;
+    font-weight: bold;
+}
+
+.cardBox{
+    margin: 20px;
+}
