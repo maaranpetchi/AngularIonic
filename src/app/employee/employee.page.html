@@ -8,8 +8,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-button *ngIf="isDisplay" (click)="addProduct()" class="btn-sub">Add User</ion-button>
-  <ion-button (click)="back()" *ngIf="!isDisplay" class="btn-sub">Back</ion-button>
+  <button *ngIf="isDisplay" (click)="addProduct()" class="button-86">Add User</button>
   <!-- </ion-card> -->
   <ion-card *ngIf="isDisplay">
     <ion-item>
@@ -104,6 +103,8 @@
             <ion-button expand="block" (click)="updateUser()">Update</ion-button>
           </ion-col>
         </ion-row>
+        <button (click)="back()" *ngIf="!isDisplay" class="button-63">Back</button>
+
       </ion-grid>
     </ion-card-content>
   </ion-card>

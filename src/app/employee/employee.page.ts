@@ -52,8 +52,16 @@ export class EmployeePage implements OnInit {
     this.clearForm();
   }
 
-  remove(id: any) {
+  async remove(id: any) {
     this.userItem.splice(id, 1);
+    const alert = await this.alertController.create({
+      header: 'Done',
+      subHeader: '',
+      message: 'Data Deleted Successfully!',
+      buttons: ['OK'],
+    });
+
+    await alert.present();
   }
 
   submitButton:boolean = true;

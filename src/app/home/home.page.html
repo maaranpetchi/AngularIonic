@@ -1,95 +1,101 @@
-  <ion-header class="titleheader">
+<ion-header class="titleheader">
   <ion-toolbar>
-    <ion-title> <div class="logoTitle"> 
-      <img class="logoPic" src="../../assets/images/kryptoslogo.png" alt="logo" srcset="">
-      <h1 class="logoheader">KRYPTOS</h1>   </div> </ion-title>
+    <ion-title>
+      <div class="logoTitle">
+        <img class="logoPic" src="../../assets/images/kryptoslogo.png" alt="logo" srcset="">
+        <h1 class="logoheader">KRYPTOS</h1>
+      </div>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true" class="ion-padding">
 
   <div class="slider">
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item" *ngFor="let image of images; let i = index" [ngClass]="{'active': i === activeIndex}">
-        <img class="d-block w-100" [src]="image.src" [alt]="image.alt" [style.height.px]="imageHeight" [style.width.px]="imageWidth">
-      </div>
-    </div>
-  </div>
-</div>
-<div class="cardsProfile">
-<div class="section_our_solution">
-  <div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12">
-      <div class="our_solution_category">
-        <div class="solution_cards_box">
-          <div class="solution_card">
-            <div class="hover_color_bubble"></div>
-            <div class="so_top_icon">
-          
-              <img src="../../assets/images/cloud.gif" alt="" srcset="">
-            </div>
-            <div class="solu_title">
-              <h3>Cloud Transformation</h3>
-            </div>
-            <div class="solu_description">
-              <p>
-                Cloud Transformation for improved speed and agility of your IT & business operations              </p>
-              <button type="button" class="read_more_btn" (click)="cloudURL()">Read More</button>
-            </div>
-          </div>
-          <div class="solution_card">
-            <div class="hover_color_bubble"></div>
-            <div class="so_top_icon">
-              <img src="../../assets/images/maintenance.png" alt="Managed Services" srcset="">
-
-            </div>
-            <div class="solu_title">
-              <h3>Managed Services</h3>
-            </div>
-            <div class="solu_description">
-              <p>
-                Analytics Driven Insights and Strategic Partnerships with major Technology Providers for better IT Management              </p>
-              <button type="button" class="read_more_btn">Read More</button>
-            </div>
-          </div>
-        </div>
-        <!--  -->
-        <div class="solution_cards_box sol_card_top_3">
-          <div class="solution_card">
-            <div class="hover_color_bubble"></div>
-            <div class="so_top_icon">
-              <img src="../../assets/images/cyber-security.png" alt="Enterprise Security" srcset="">
-
-            </div>
-            <div class="solu_title">
-              <h3>Enterprise Security</h3>
-            </div>
-            <div class="solu_description">
-              <p>
-                Integrating Enterprise IT Security into your Business with tailored security solutions
-              </p>
-              <button type="button" class="read_more_btn">Read More</button>
-            </div>
-          </div>
-          <div class="solution_card">
-            <div class="hover_color_bubble"></div>
-            <div class="so_top_icon">
-              <img src="../../assets/images/winner.png" alt="Emerging Technologies" srcset="">
-            </div>
-            <div class="solu_title">
-              <h3>Emerging Technologies</h3>
-            </div>
-            <div class="solu_description">
-              <p>
-                Enter a new era of Digital Engineering and transformation
-              </p>
-              <button type="button" class="read_more_btn">Read More</button>
-            </div>
-          </div>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item" *ngFor="let image of images; let i = index"
+          [ngClass]="{'active': i === activeIndex}">
+          <img class="d-block w-100" [src]="image.src" [alt]="image.alt" [style.height.px]="imageHeight"
+            [style.width.px]="imageWidth">
         </div>
       </div>
     </div>
   </div>
-</div>
-</div>
+  <div class="cardsProfile">
+    <div class="section_our_solution">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="our_solution_category">
+            <div class="solution_cards_box">
+              <div class="solution_card">
+                <div class="hover_color_bubble"></div>
+                <div class="so_top_icon">
+
+                  <img src="../../assets/images/cloud.gif" alt="" srcset="">
+                </div>
+                <div class="solu_title">
+                  <h3>Cloud Transformation</h3>
+                </div>
+                <div class="solu_description">
+                  <p>
+                    Cloud Transformation for improved speed and agility of your IT & business operations </p>
+                  <button type="button" class="read_more_btn" (click)="cloudURL()">Read More</button>
+                </div>
+              </div>
+              <div class="solution_card">
+                <div class="hover_color_bubble"></div>
+                <div class="so_top_icon">
+                  <img src="../../assets/images/maintenance.png" alt="Managed Services" srcset="">
+
+                </div>
+                <div class="solu_title">
+                  <h3>Managed Services</h3>
+                </div>
+                <div class="solu_description">
+                  <p>
+                    Analytics Driven Insights and Strategic Partnerships with major Technology Providers for better IT
+                    Management </p>
+                  <button type="button" class="read_more_btn">Read More</button>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="solution_cards_box sol_card_top_3">
+              <div class="solution_card">
+                <div class="hover_color_bubble"></div>
+                <div class="so_top_icon">
+                  <img src="../../assets/images/cyber-security.png" alt="Enterprise Security" srcset="">
+
+                </div>
+                <div class="solu_title">
+                  <h3>Enterprise Security</h3>
+                </div>
+                <div class="solu_description">
+                  <p>
+                    Integrating Enterprise IT Security into your Business with tailored security solutions
+                  </p>
+                  <button type="button" class="read_more_btn">Read More</button>
+                </div>
+              </div>
+              <div class="solution_card">
+                <div class="hover_color_bubble"></div>
+                <div class="so_top_icon">
+                  <img src="../../assets/images/winner.png" alt="Emerging Technologies" srcset="">
+                </div>
+                <div class="solu_title">
+                  <h3>Emerging Technologies</h3>
+                </div>
+                <div class="solu_description">
+                  <p>
+                    Enter a new era of Digital Engineering and transformation
+                  </p>
+                  <button type="button" class="read_more_btn">Read More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </ion-content>

@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class HomePage  implements OnInit {
   
   images = [
-    { src: '../../assets/images/MEAN-STACK.jpg', alt: 'First slide' },
-    { src: '../../assets/images/CODING.jpg', alt: 'Second slide' },
-    { src:'../../assets/images/ANGULAR.jpg', alt: 'Third slide' }
+    { src: '../../assets/images/kryptos logo.png', alt: 'KRYPTOS-LOGO' },
+    { src: '../../assets/images/CrayonLogo.png', alt: 'CRAYON-LOGO' },
+    { src:'../../assets/images/CODING.jpg', alt: 'CODINGPIC' }
   ];
 
     // Set the desired image height and width here
@@ -27,7 +27,7 @@ export class HomePage  implements OnInit {
   startAutoSlide() {
     setInterval(() => {
       this.nextSlide();
-    }, 4000); // 4 seconds
+    }, 3000); // 4 seconds
   }
 
   nextSlide() {
